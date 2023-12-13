@@ -14,9 +14,10 @@ export default defineConfig({
         '**/src/app'
       ],
       include: [
-        '**/src/**/*.{test,spec}.{js,ts}'
+        '**/src/**/*.{jsx,tsx}'
       ],
-      reportsDirectory: './coverage'
+      reportsDirectory: './coverage',
+      reporter: ['text', 'html']
     }
   }
 })
