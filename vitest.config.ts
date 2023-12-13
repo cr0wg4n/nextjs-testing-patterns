@@ -18,6 +18,7 @@ export default defineConfig({
       ],
       reportsDirectory: './coverage',
       reporter: ['text', 'html']
-    }
+    },
+    setupFiles: './vitest.setup.ts'
   }
 })
