@@ -1,5 +1,6 @@
 import BookList from './BookList';
 import { render, screen } from '@testing-library/react'
+import { expect } from 'vitest'
 
 
 describe('BookList.tsx', () => {
@@ -8,6 +9,7 @@ describe('BookList.tsx', () => {
   })
 
   it('should render the amount of books provided (3 books)', () => {
+    // ARRANGE
     vi.mock('./BookItem', () => ({
       default: () => <div data-testid="book-item"></div>
     }))
@@ -39,10 +41,10 @@ describe('BookList.tsx', () => {
     ]
     const onBuyNow = vi.fn()
     const onAddToCart = vi.fn()
-
     render(<BookList books={books} onBuyNow={onBuyNow} onAddToCart={onAddToCart}/>)
+    // ACT
     const booksRendered = screen.getAllByTestId('book-item')
-
+    // ASSERT
     expect(booksRendered).toHaveLength(3)
   })
 })
