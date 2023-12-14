@@ -35,3 +35,23 @@
 //     }
 //   }
 // }
+
+
+Cypress.Commands.add('visitHome', () => {
+  cy.visit('/')
+})
+
+Cypress.Commands.add('visitCart', () => {
+  cy.visit('/cart')
+})
+
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      visitHome(): Chainable<void>,
+      visitCart(): Chainable<void>,
+    }
+  }
+}
+
+export {}

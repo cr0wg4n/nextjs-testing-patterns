@@ -1,6 +1,8 @@
 describe('Index Page', () => {
   beforeEach(() => {
     cy.visit('/')
+    // or the command:
+    // cy.visitHome()
   })
 
   it('should navigate to the site', () => {
