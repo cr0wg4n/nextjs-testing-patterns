@@ -14,14 +14,22 @@ interface CartStore {
 const useCart = create<CartStore>((set, get) => ({
   books: (() => books)(),
   cart: [],
-  addBook: (newItem: any) => set((state: any) => {
-    state.books.push(newItem)
-    return state
+  addBook: (newItem: any) => set((state) => {
+    return {
+      books: [
+        ...state.books,
+        newItem
+      ]
+    }
   }),
-  addToCart: (itemId: any) => set((state: any) => {
+  addToCart: (itemId: any) => set((state) => {
     const book = state.books.find(({ id }: any) => id === itemId)
-    book && state.cart.push(book)
-    return state
+    return {
+      cart: [
+        ...state.cart,
+        ...book ? [book] : []
+      ]
+    }
   }),
   purchase: () => {
     const cart = get().cart

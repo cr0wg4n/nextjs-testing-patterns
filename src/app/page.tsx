@@ -4,13 +4,14 @@ import { useCart } from '@/store/cart'
 import { useRouter } from 'next/navigation'
 
 export default function Home() {
-  const {books, addToCart} = useCart((state) => ({
+  const { books, addToCart, cart } = useCart((state) => ({
     books: state.books,
-    cart: state.cart,
-    addToCart: state.addToCart
+    addToCart: state.addToCart,
+    cart: state.cart
   }))
-  const { push } = useRouter()
 
+  const { push } = useRouter()
+  
   const onAddToCartHandler = (id: string) => {
     addToCart(id)
   }
@@ -22,8 +23,11 @@ export default function Home() {
 
   return (
     <main>
-      <div className="flex justify-center items-center gap-8 my-40">
+      <div className="flex flex-col justify-center items-center gap-8 my-40">
         <BookList books={books} onAddToCart={onAddToCartHandler} onBuyNow={onBuyNowHandler}/>
+        <div>
+          Items in Cart: { cart.length }
+        </div>
       </div>
     </main>
   )

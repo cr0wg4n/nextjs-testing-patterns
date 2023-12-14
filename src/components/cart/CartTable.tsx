@@ -37,8 +37,8 @@ const CartTable: React.FC<CartTableProps> = ({ purchase }: CartTableProps) => {
           </tr>
         ))}
         {!purchase.length && (
-          <tr>
-            <td colSpan={4} className="text-center text-gray-400">
+          <tr className="h-40">
+            <td colSpan={4} className="text-center text-gray-400" data-cy="cart-table-no-items">
               No items
             </td>
           </tr>

@@ -18,6 +18,9 @@ const Navbar: React.FC<NavbarProps> = ({ title }: NavbarProps) => {
           <li>
             <Link href="/cart">Cart</Link>
           </li>
+          <li>
+            <Link href="/">Books</Link>
+          </li>
         </ul>
       </div>
     </div>
