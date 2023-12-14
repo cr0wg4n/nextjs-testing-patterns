@@ -20,6 +20,11 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar title="UnoBooks"/>
         {children}
+        <div className='text-center my-8'>
+          Resources: <a className='link' href="https://github.com/mauzip/nextjs-testing-patterns" target='_blank' rel='noopener'>
+            https://github.com/mauzip/nextjs-testing-patterns
+          </a>
+        </div>
       </body>
     </html>
   )
