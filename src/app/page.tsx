@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="flex flex-col justify-center items-center gap-8 my-40">
+      <div className="flex flex-col justify-center items-center gap-8 mt-12">
         <BookList books={books} onAddToCart={onAddToCartHandler} onBuyNow={onBuyNowHandler}/>
         <div>
           Items in Cart: <span data-cy="books-in-cart">{ cart.length }</span>
