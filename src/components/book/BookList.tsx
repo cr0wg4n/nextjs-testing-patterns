@@ -8,7 +8,7 @@ interface BookListProps {
 
 const BookList: React.FC<BookListProps> = ({ books, onAddToCart, onBuyNow }: BookListProps) => {
   return (
-    <div className="flex justify-center items-center gap-8">
+    <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
       {
         books.map(({
           id,

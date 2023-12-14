@@ -1,3 +1,5 @@
+import { Book } from "@/types"
+
 const books: Book[] = [
   {
     id: 'book-1',
@@ -15,6 +17,14 @@ const books: Book[] = [
     image: '/book-2.jpg',
     price: 167.99,
     author: 'Byung Chul Han'
+  },
+  {
+    id: 'book-3',
+    title: 'Modernidad Líquida',
+    description: `En este libro el sociólogo y filósofo polaco, Zygmunt Bauman nos presenta cinco conceptos básicos de importancia en las actuales condiciones humanas: emancipación, individualidad, tiempo/espacio, trabajo y comunidad. El autor aborda dichos temas desde la perspectiva de la sociología e intenta dar respuestas a interrogantes como: ¿qué es una sociedad?, ¿cómo se identifica?, ¿qué la compone?, ¿qué relación hay entre los elementos que la componen, y el mundo exterior?, ¿la sociedad va hacia una modernidad, o ya está en ella?, ¿qué es modernidad?, ¿sólida?, ¿líquida? Mediante estas preguntas analiza la complejidad de las nuevas sociedades y la manera de enfrentar el fenómeno de la inmediatez.`,
+    image: '/book-3.webp',
+    price: 201.99,
+    author: 'Zygmunt Bauman'
   }
 ]
 

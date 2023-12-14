@@ -16,11 +16,8 @@ const Navbar: React.FC<NavbarProps> = ({ title }: NavbarProps) => {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link href="/books">Books</Link>
-          </li>
-          {/* <li>
             <Link href="/cart">Cart</Link>
-          </li> */}
+          </li>
         </ul>
       </div>
     </div>

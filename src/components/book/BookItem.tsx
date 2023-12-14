@@ -22,9 +22,9 @@ const BookItem: React.FC<BookItemProps> = ({
   onBuyNow
 }: BookItemProps) => {
   return (
-    <div className="card w-96 shadow-lg border border-neutral-200 hover:scale-105">
+    <div className="card w-96 border border-neutral-200 hover:scale-105 shadow-lg">
       <figure className="p-10">
-        <Image src={image} alt="book" width={100} height={100}/>
+        <Image src={image} alt="book" width={130} height={0} className="object-cover h-52"/>
       </figure>
       <div className="card-body bg-neutral-300 p-4 rounded-b-2xl">
         <div className="card-title truncate" data-testid="book-item-title">
