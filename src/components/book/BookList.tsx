@@ -1,3 +1,4 @@
+import { Book } from "@/types"
 import BookItem from "./BookItem"
 
 interface BookListProps {

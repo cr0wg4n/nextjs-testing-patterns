@@ -17,7 +17,13 @@ export default defineConfig({
         '**/src/**/*.{jsx,tsx}'
       ],
       reportsDirectory: './coverage',
-      reporter: ['text', 'html']
+      reporter: ['text', 'html'],
+      thresholds: {
+        lines: 80,
+        functions: 80,
+        branches: 80,
+        statements: 80
+      }
     },
     setupFiles: './vitest.setup.ts'
   }

@@ -22,7 +22,7 @@ const BookItem: React.FC<BookItemProps> = ({
   onBuyNow
 }: BookItemProps) => {
   return (
-    <div className="card w-96 border border-neutral-200 hover:scale-105 shadow-lg">
+    <div className="card w-96 border border-neutral-200 hover:scale-105 shadow-lg" data-cy="book-item">
       <figure className="p-10">
         <Image src={image} alt="book" width={130} height={0} className="object-cover h-52"/>
       </figure>
@@ -48,6 +48,7 @@ const BookItem: React.FC<BookItemProps> = ({
               className="btn btn-secondary mr-2" 
               onClick={()=>onAddToCart(id)}
               data-testid="book-item-cart-button"
+              data-cy="book-item-cart-button"
             >
               Add to Cart
             </button>
@@ -55,6 +56,7 @@ const BookItem: React.FC<BookItemProps> = ({
               className="btn btn-accent text-white" 
               onClick={()=>onBuyNow(id)}
               data-testid="book-item-buy-button"
+              data-cy="book-item-buy-button"
             >
               Buy Now
             </button>
